@@ -1,14 +1,11 @@
-import { createRoutesFromElements , createBrowserRouter, Route } from 'react-router';
+
 import './App.css';
 
 function App() {
-    createBrowserRouter(
-        createRoutesFromElements(
-            <Route path='/'>
-
-            </Route>
-        )
-    )
+  return (
+    <h1>Hello</h1>
+  )
+   
 }
 
 export default App;
