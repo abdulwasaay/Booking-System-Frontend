@@ -52,12 +52,11 @@ select:hover{
     position: absolute;
     z-index: 9;
     display: none;
-    width: 300px;
-    height: 300px;
+    width: 330px;
+    height: 330px;
     background-color: #2e2d2b;
     color: #f5b342;
     border-radius: 8px;
-    /* box-shadow: #2e2d2b; */
 }
 .traveler_btn{
     border-radius: 4px;

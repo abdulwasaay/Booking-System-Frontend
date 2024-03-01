@@ -140,4 +140,4 @@ const citiesData2 = [
       otherParameters: "parameter20"
     }
   ];
-  
+export default citiesData2;
