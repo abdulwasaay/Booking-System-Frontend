@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import './Flights.css';
 import { useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cityData1 from './city1';
@@ -172,28 +172,25 @@ export const Flights = ()=>{
                             <button className="search_flight" onClick={handleClick}>Search Flights</button>
                         </div>
                     </Row>
+                    
                 </div>   
-                {/* the search flights result will be shown here o */}
-                {
-                    searchData.map((d, index) => {
-                        return (
-                            <div key={index} className="text-white">
-                                {d.name}
-                            </div>
-                        )
-                    })   
-                }
-                {/* {
-                    useEffect(() => {
-                        console.log(cityData1)
-                    },[])
-        
-                } */}
-                
-
-
-                   
-      
+            </div>
+            <div className="text-center d-flex flex-col justify-content-center align-items-center"> 
+                <Row>
+                    <Col>
+                    
+                        {
+                            searchData.map((d, index) => {
+                                return (
+                                    <div key={index} className="text-dark">
+                                        {d.name}
+                                    </div>
+                                )
+                            })   
+                        }
+                    
+                    </Col>
+                </Row>
             </div>
         </>
     )
