@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import './Flights.css';
 import { useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import Container from 'react-bootstrap/Container';
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cityData1 from './city1';
 import cityData2 from './city2';
+import jsonData from "../flights.json";
+console.log('jsonData', jsonData);
 // import infantPic from './baby_4605422.png';
 
 export const Flights = ()=>{
@@ -52,17 +54,26 @@ export const Flights = ()=>{
     }
 
     // the code for the search related problem
-    const [search, setSearch] = useState(0);
+    const [search, setSearch] = useState("");
     const [searchData, setSearchData] = useState([]);
+    
     const handleClick = () => {
       
     }
-  
-  
     useEffect(() => {
-      const dummyData = cityData1.filter((city) => city.name.toLowerCase().startsWith(search))
+        const dummyData = jsonData.cities.filter((city) => city.name.toLowerCase().startsWith(search))  
       setSearchData(dummyData)
     },[search])
+
+    // now search two 
+
+    // const [search2, setSearch2] = useState(0);
+    // const [searchData2, setSearchData2] = useState([]);
+    // useEffect(() => {
+    //   const dummyData2 = searchData.flights.filter((city) => city.name.toLowerCase().startsWith(search2))
+    //   setSearchData2(dummyData2)
+    // },[search2])
+
     
     return(
         <>
@@ -149,9 +160,20 @@ export const Flights = ()=>{
                     <Row className="main_paramters">
                         <Col className="mb-3"> 
                             <div class="search-container from">
-                                <input type="search" id="search-input" oninput="" onChange={(e) => {setSearch(e.target.value)}} placeholder="From?"/>
-                                <i class="fa fa-map-marker-alt" id="search-icon"></i>  
+                                <input type="search" id="search-input" oninput="" onChange={(e) => { setSearch(e.target.value) }} placeholder="From?" />
+                                <i class="fa fa-map-marker-alt" id="search-icon"></i>
                             </div>
+                            <div className="">
+                                    {   
+                                        searchData.map((d, index) => {
+                                            return (
+                                                <div key={index} className="text-dark">
+                                                    {d.name}
+                                                </div>
+                                            )
+                                        })   
+                                    }
+                                </div>
                         </Col>
                         <Col className="mb-3">
                             <div className="search-container to"> 
@@ -179,7 +201,7 @@ export const Flights = ()=>{
                 <Row>
                     <Col>
                     
-                        {
+                        {/* {
                             searchData.map((d, index) => {
                                 return (
                                     <div key={index} className="text-dark">
@@ -187,8 +209,22 @@ export const Flights = ()=>{
                                     </div>
                                 )
                             })   
-                        }
+                        } */}
                     
+                    </Col>
+                    <Col>
+                        {/* {
+                            searchData2.map((data,index)=>{
+                                return (
+                                    <div key={index} className="text-dark">
+                                        {data.name}
+                                        {data.shortForm}
+                                        {data.flightNumber}    
+                                        {data.flightPrice}
+                                    </div>
+                                )
+                            })
+                        } */}
                     </Col>
                 </Row>
             </div>
