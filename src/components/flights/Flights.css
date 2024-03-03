@@ -17,6 +17,11 @@ input::placeholder {
     font-weight: 400;
 }
 
+select option:hover {
+    background-color: black;
+    color: white;
+}
+
 .search-container {
     position: relative;
 }
