@@ -1,10 +1,15 @@
 import './App.css';
-
+import { Flights } from './components/flights/Flights';
+import '../src/components/flights/Flights.css';
+import { About } from './pages/About.jsx';
+import './pages/About.css';
 function App() {
-  return (
-    <h1>Hello</h1>
-  )
-   
+    return (
+        <>
+            <Flights />
+            {/* <About /> */}
+        </>
+    );
 }
 
 export default App;
