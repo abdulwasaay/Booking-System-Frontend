@@ -7,7 +7,7 @@ function App() {
     return (
         <>
             <Flights />
-            <About />
+            {/* <About /> */}
         </>
     );
 }

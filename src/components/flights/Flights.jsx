@@ -3,6 +3,9 @@ import './Flights.css';
 import { useState} from "react";
 import '../../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 
+
+import { FlightMenu }   from "./FlightMenu";
+
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import cityData1 from './city1';
@@ -54,6 +57,23 @@ export const Flights = ()=>{
     }
 
     // the code for the search related problem
+    const [manue1, setMenu1] = useState(false);
+    const [manue2, setMenu2] = useState(false);
+    const [startInput, setStartInput] = useState(false);
+    const [endInput, setEndInput] = useState(false);
+
+    const openMenuOneHandler = (e) => { 
+        setStartInput(e.target.value);
+        if (!manue1) {
+            setMenu1(true);
+        }
+    }
+    const openMenuTwoHandler = (e) => { 
+        setEndInput(e.target.value);
+        if (!manue2) {
+            setMenu2(true);
+        }
+    }
 
     // for the date input
     const [currentDate, setCurrentDate] = useState('');
@@ -181,26 +201,24 @@ export const Flights = ()=>{
                     <Row className="main_paramters">
                         <Col className="mb-3"> 
                             <div class="search-container from">
-                                <input type="search" id="search-input" oninput="" onChange={(e) => { setSearch(e.target.value) }} placeholder="From?" />
+                                <input type="search" id="search-input" oninput="" onChange={openMenuOneHandler} placeholder="From?" />
                                 <i class="fa fa-map-marker-alt" id="search-icon"></i>
                             </div>
-                            <div className="">
-                                    {   
-                                        searchData.map((d, index) => {
-                                            return (
-                                                <div key={index} className="text-dark">
-                                                    {d.name}
-                                                </div>
-                                            )
-                                        })   
-                                    }
+                            <div className="inputOne">
+                                < FlightMenu/>
+                                   
                                 </div>
                         </Col>
                         <Col className="mb-3">
                             <div className="search-container to"> 
-                                <input type="search" id="search-input" oninput="" onChange={(e) => {setSearch2(e.target.value)}} placeholder="To?"/> 
+                                <input type="search" id="search-input" oninput="" onChange={openMenuTwoHandler} placeholder="To?"/> 
                                 <i class="fa fa-map-marker-alt" id="search-icon"></i>   
                             </div>
+                            <div className="inputOne">
+                                < FlightMenu/>
+                                   
+                                </div>
+
                         </Col>
                         <Col className="mb-3"> 
                             <div className="date">
