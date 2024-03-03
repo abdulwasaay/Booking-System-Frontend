@@ -12,10 +12,62 @@
   background-position: right bottom;
   transition: background-position 0.3s ease;
   color: #fff;
-  cursor: pointer;
   overflow: hidden;
 }
 
-.buttons:hover{
-    background-position: left bottom;
+.dropDown{
+    transition: 0.1s ease;
+}
+
+.scrolls::-webkit-scrollbar{
+    width: 0;
+}
+
+.cardTravel{
+    flex-basis: 20.55555%;
+    width: 100%;
+}
+
+@media (max-width:1067px) {
+    .cardTravel{
+        flex-basis: 24.55555%;
+        width: 25rem;
+    }
+    
+}
+
+@media (max-width:894px) {
+    .cardTravel{
+        flex-basis: 39.55555%;
+        width: 55rem;
+    }
+    
+}
+
+@media (max-width:553px) {
+    .cardTravel{
+        flex-basis: 79.55555%;
+        width: 55rem;
+    }
+    
+}
+
+.cardss{
+    flex-basis: 21.55555%;
+}
+
+@media (max-width:949px) {
+    .cardss{
+        flex-basis: 41.55555%;
+        width: 55rem;
+    }
+    
+}
+
+@media (max-width:509px) {
+    .cardss{
+        flex-basis: 91.55555%;
+        width: 55rem;
+    }
+    
 }
