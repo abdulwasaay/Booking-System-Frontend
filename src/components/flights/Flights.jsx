@@ -8,7 +8,7 @@ import Col from 'react-bootstrap/Col';
 import cityData1 from './city1';
 import cityData2 from './city2';
 import jsonData from "../flights.json";
-console.log('jsonData', jsonData);
+// console.log('jsonData', jsonData);
 // import infantPic from './baby_4605422.png';
 
 export const Flights = ()=>{
@@ -54,25 +54,46 @@ export const Flights = ()=>{
     }
 
     // the code for the search related problem
+
+    // for the date input
+    const [currentDate, setCurrentDate] = useState('');
+
+    useEffect(() => {
+      const formattedDate = new Date().toISOString().slice(0, 10);
+      setCurrentDate(formattedDate);
+    }, []); 
+
+
     const [search, setSearch] = useState("");
     const [searchData, setSearchData] = useState([]);
     
-    const handleClick = () => {
-      
-    }
     useEffect(() => {
         const dummyData = jsonData.cities.filter((city) => city.name.toLowerCase().startsWith(search))  
+        // console.log('dummyData', dummyData);
       setSearchData(dummyData)
-    },[search])
+    }, [search])
+    
+    // now search two
 
-    // now search two 
+    const [search2, setSearch2] = useState("");
+    const [searchData2, setSearchData2] = useState([]);
+    useEffect(() => {
+        const dummyData2 = searchData2.filter((city) => city.name.toLowerCase().startsWith(search2))
+        // console.log("dummyData2", search2);
+      setSearchData2(dummyData2)
+    },[search2])
 
-    // const [search2, setSearch2] = useState(0);
-    // const [searchData2, setSearchData2] = useState([]);
-    // useEffect(() => {
-    //   const dummyData2 = searchData.flights.filter((city) => city.name.toLowerCase().startsWith(search2))
-    //   setSearchData2(dummyData2)
-    // },[search2])
+    const handleClick = (e) => {
+        e.preventDefault();
+        const fromValue = jsonData.cities.filter((s) => s.name.toLowerCase() === search.toLowerCase())
+        console.log('fromValue', fromValue);
+        if (fromValue) {
+            const toValue = fromValue[0].flights.filter((f) => f.destination.toLowerCase() === search2.toLowerCase())
+            console.log('toValue', toValue);
+        }
+    }
+    
+    
 
     
     return(
@@ -177,13 +198,13 @@ export const Flights = ()=>{
                         </Col>
                         <Col className="mb-3">
                             <div className="search-container to"> 
-                                <input type="search" id="search-input" oninput="" placeholder="To?"/> 
+                                <input type="search" id="search-input" oninput="" onChange={(e) => {setSearch2(e.target.value)}} placeholder="To?"/> 
                                 <i class="fa fa-map-marker-alt" id="search-icon"></i>   
                             </div>
                         </Col>
                         <Col className="mb-3"> 
                             <div className="date">
-                                <input type="date" oninput="" 
+                                <input type="date" oninput="" value={currentDate} onChange={(e) => setCurrentDate(e.target.value)}
                                     id="dateInput"   
                                 /> 
                             </div>
