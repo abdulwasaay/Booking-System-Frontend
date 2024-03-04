@@ -1,0 +1,27 @@
+.radio-checkbox{
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.radio-container input:checked + .radio-checkbox{
+    background-color: #f5b342;
+    border: 1px solid #f5b342;
+}
+
+.billForm{
+    position: absolute;
+    left: 50%;
+    margin-top: 50px;
+    transform: translateX(-50%);
+}
+
+.number{
+    -moz-appearance: textfield;
+}
+
+.number::-webkit-inner-spin-button,
+.no-spinner::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

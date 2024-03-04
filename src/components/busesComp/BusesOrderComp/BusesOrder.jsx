@@ -1,5 +1,6 @@
 import Card from 'react-bootstrap/Card';
 import Buttonss from '../button';
+import BillingFormsLists from '../BillingForm/BillingFormList';
 
 export default function BusOrdersComp() {
     let data = localStorage.getItem("BookingCart");
@@ -43,14 +44,15 @@ export default function BusOrdersComp() {
                 <div className=' ml-[30px] max-[800px]:ml-0 max-[800px]:mt-4'>
                 <Card className=' w-[330px] max-[800px]:w-full'>
                 <div className='bg-[#0000ff4f] text-white pl-[22px] pt-2 pb-2 text-[20px]'>Price Summary</div>
-                <div className=' flex justify-between mt-[15px]'>
+                <div className=' flex justify-between mt-[15px] max-[319px]:flex-col'>
                     <p className=' ml-[20px] font-bold text-[18px] '>Total Price</p>
-                    <p className=' mr-[20px] font-bold mt-[3px] text-[#0000ffb0]'>PKR {tripData.totalCost}</p>
+                    <p className=' mr-[20px] font-bold mt-[3px] text-[#0000ffb0] max-[319px]:mr-0 max-[319px]:ml-[23px]'>PKR {tripData.totalCost}</p>
                 </div>
                 </Card>
                 <Buttonss text="Continue Booking" widths=" rounded-md w-[330px] mt-[10px] mb-[30px] max-[800px]:w-full"/>
                 </div>
             </div>
+            <BillingFormsLists />
         </section>
     )
 }
