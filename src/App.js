@@ -1,15 +1,9 @@
 import './App.css';
-import { Flights } from './components/flights/Flights';
-import '../src/components/flights/Flights.css';
-import { About } from './pages/About.jsx';
-import './pages/About.css';
+import Layout from './components/hotels-components/Layout'
+
 function App() {
-    return (
-        <>
-            <Flights />
-            {/* <About /> */}
-        </>
-    );
+  return <Layout />
+  
 }
 
 export default App;
