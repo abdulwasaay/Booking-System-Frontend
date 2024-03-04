@@ -3,10 +3,11 @@ import Dropdown from 'react-bootstrap/Dropdown';
 import Buttonss from "../button";
 import { useState } from 'react';
 import BussSeat from './Seat';
+import { useNavigate } from 'react-router-dom';
 
 export default function BusCard({ s, idss, totalPrice, toFound, fromFound ,fullDate }) {
+    const navigate = useNavigate();
     const [isSelects, setIsselects] = useState([]);
-    const [isCheck,setIscheck] = useState(false)
 
     const BookHandler =()=>{
         let priceTotal= totalPrice*isSelects.length;
@@ -20,6 +21,7 @@ export default function BusCard({ s, idss, totalPrice, toFound, fromFound ,fullD
         }
         localStorage.setItem("BookingCart",JSON.stringify(travelingData))
         setIsselects([])
+        navigate("/buses/ordernow")
     }
     const addSeats = (seat, indx) => {
         if (isSelects.length === 0) {
@@ -63,7 +65,7 @@ export default function BusCard({ s, idss, totalPrice, toFound, fromFound ,fullD
                         {
                             s.availableSeats.map((seats, inds) => {
                                 return (
-                                    <BussSeat seat={seats} ind={inds} clicks={addSeats} check={isCheck}/>
+                                    <BussSeat seat={seats} ind={inds} clicks={addSeats}/>
                                 )
                             })
                         }

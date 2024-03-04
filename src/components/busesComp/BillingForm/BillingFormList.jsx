@@ -1,12 +1,15 @@
 import "./Billing.css"
 import { useState } from 'react';
 import BillingForms from "./BillingForm";
+import BillToken from "../finalToken/Token";
 
-export default function BillingFormsLists() {
+export default function BillingFormsLists({billStyle}) {
     const [check,setCheck] = useState("check1");
+    const [tokenStyle,setTokenStyle] = useState("scale-0");
     console.log(check)
     return (
-        <section className=' mt-[70px]'>
+        <section className={`mt-[70px] transition ${billStyle}`}>
+            <div id="formList">
             <div className=' flex justify-between ml-[100px] mr-[100px] max-[966px]:ml-[30px] max-[966px]:mr-[30px]'>
                 <p>Step1</p>
                 <p>Step2</p>
@@ -15,26 +18,28 @@ export default function BillingFormsLists() {
             <div className=' flex ml-[100px] mr-[100px] max-[966px]:ml-[30px] max-[966px]:mr-[30px]'>
                 <div>
                     <label className="radio-container relative">
-                        <input type="radio" name="radio-group" defaultChecked onChange={()=>setCheck("check1")}/>
+                        <input type="radio" name="radio-group" defaultChecked checked={check==="check1"?true:false} onChange={()=>setCheck("check1")}/>
                         <span className="radio-checkbox absolute left-0 top-[1px] w-[20px] h-[20px] rounded-full"></span>
                     </label>
                 </div>
                 <div className=' w-[100%] h-[15px] bg-[#0000ffa6] rounded-2xl mt-1 ml-[10px] mr-[3px]'></div>
                 <div>
                     <label className="radio-container relative">
-                        <input type="radio" name="radio-group" onChange={()=>setCheck("check2")}/>
+                        <input type="radio" name="radio-group" checked={check==="check2"?true:false} onChange={()=>setCheck("check2")}/>
                         <span className="radio-checkbox absolute  left-0 top-[1px] w-[20px] h-[20px] rounded-full"></span>
                     </label>
                 </div>
                 <div className=' w-[100%] h-[15px] bg-[#0000ffa6] rounded-2xl mt-1 ml-[10px] mr-[3px]'></div>
                 <div>
                     <label className="radio-container relative">
-                        <input type="radio" name="radio-group" onChange={()=>setCheck("check3")}/>
+                        <input type="radio" name="radio-group" checked={check==="check3"?true:false} onChange={()=>setCheck("check3")}/>
                         <span className="radio-checkbox absolute left-0 top-[1px] w-[20px] h-[20px] rounded-full"></span>
                     </label>
                 </div>
             </div>
-            <BillingForms checkValue={check}/>
+            </div>
+            <BillingForms checkValue={check} checkFunc={setCheck} tokenSTyleFunc={setTokenStyle}/>
+            <BillToken toknstyle={tokenStyle}/>
         </section>
     )
 }
