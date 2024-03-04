@@ -1,0 +1,118 @@
+input {
+    border-radius: 5px;
+    border: 0.5px solid #2e2d2b;
+    outline: none;
+    padding: 13px 5px;
+    font-size: larger;
+    font-weight: 600px;
+    width: 400px;
+}
+input[type='date'] {
+    width: 400px;
+    padding-left: 20px;
+}
+
+input::placeholder {
+    color: black;
+    font-weight: 400;
+}
+
+select option:hover {
+    background-color: black;
+    color: white;
+}
+
+.search-container {
+    position: relative;
+}
+#search-input {
+    padding-left: 30px;
+}
+#search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #f5b342;
+}
+select {
+    border: 0;
+    border-radius: 4px;
+    padding-bottom: 4px;
+    background-color: transparent;
+    font-size: 14px;
+    font-weight: 500;
+}
+select:focus {
+    border: 0;
+    outline: none;
+}
+select:hover {
+    background-color: #d4890754;
+}
+.traveler_btn:hover {
+    background-color: #d4890754;
+}
+.block {
+    position: absolute;
+    z-index: 9;
+    display: none;
+    width: 330px;
+    height: 330px;
+    background-color: #2e2d2b;
+    color: #f5b342;
+    border-radius: 8px;
+}
+.traveler_btn {
+    border-radius: 4px;
+    border: none;
+    background-color: transparent;
+}
+.background {
+    min-height: 450px;
+    background-image: url('../../../public/images/bg4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: center;
+    position: relative;
+}
+.container {
+    border-radius: 6px;
+    padding-top: 20px;
+    background-color: #f5b342;
+    padding-bottom: 20px;
+}
+.relative {
+    position: relative;
+    height: 100vh;
+    background-color: #2e2d2b;
+}
+.search_flight {
+    border-radius: 6px;
+    width: 200px;
+    height: 50px;
+    font-size: large;
+    font-weight: 500;
+    background-color: #2e2d2b;
+    color: #f5b342;
+}
+.plus,
+.minus {
+    background-color: transparent;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f5b342;
+}
+.plus i {
+    height: 20px;
+    width: 20px;
+}
+
+input [type='date'] {
+    placeholder: 'Today';
+}
