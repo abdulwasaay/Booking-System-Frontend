@@ -2,8 +2,11 @@ import { Formik } from 'formik';
 import { FaCcVisa } from "react-icons/fa";
 import { BiMoneyWithdraw } from "react-icons/bi";
 import { FaCcMastercard } from "react-icons/fa";
+import { useState } from 'react';
 
 export default function BillingForms({ checkValue , checkFunc , tokenSTyleFunc }) {
+    const [submitErr,setSubmitErr] = useState("");
+
     if (checkValue === "check1") {
         return (
             <div id='form' className=' billForm bg-[#fc7042] w-[87%] pt-[20px] pb-[20px] rounded-lg max-[663px]:w-[90%]'>
@@ -25,11 +28,18 @@ export default function BillingForms({ checkValue , checkFunc , tokenSTyleFunc }
                         return errors
                     }}
                     onSubmit={(values, { setSubmitting }) => {
+                        const token = localStorage.getItem("token");
+                        const data = JSON.parse(token);
                         setTimeout(() => {
-                            checkFunc("check2")
-                            console.log(values);
-                            setSubmitting(false);
-                        }, 400);
+                        if (data.email !== values.email){
+                            setSubmitErr("Email not found!")
+                        }else{
+                                checkFunc("check2")
+                                console.log(values);
+                                setSubmitErr("")
+                        }
+                        setSubmitting(false);
+                    }, 400);
                     }}
                 >
                     {
@@ -52,7 +62,7 @@ export default function BillingForms({ checkValue , checkFunc , tokenSTyleFunc }
                                 </p>
                                 <div className=' flex justify-between border-1 ml-[20px] mr-[20px] mb-1 pl-[20px] pr-[60px] pt-[10px] pb-[10px] rounded-lg max-[411px]:pr-[10px] max-[411px]:pl-[10px] max-[411px]:flex-col'>
                                     <p className=' relative top-2 max-[411px]:left-5'>Email</p>
-                                    <input type='email' required name='email' value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder='example@domain.com' className={`w-[1050px] h-[40px] ml-[20px] pl-[20px] rounded-lg outline-none max-[411px]:ml-[10px] max-[411px]:w-[94%] ${errors.email ? 'border-2 border-red-600' : 'border-none'}`} />
+                                    <input type='email' required name='email' value={values.email} onChange={handleChange} onBlur={handleBlur} placeholder='example@domain.com' className={`w-[1050px] h-[40px] ml-[20px] pl-[20px] rounded-lg outline-none max-[411px]:ml-[10px] max-[411px]:w-[94%] ${errors.email || submitErr==="Email not found!" ? 'border-2 border-red-600' : 'border-none'} `} />
                                 </div>
                                 <p className=' text-center text-red-600 font-extrabold ml-[20px] mr-[20px]'>{errors.email && touched.email && errors.email}</p>
                                 <div className=' flex justify-between border-1 ml-[20px] mr-[20px] mb-1 pl-[20px] pr-[60px] pt-[10px] pb-[10px] rounded-lg max-[411px]:pr-[10px] max-[411px]:pl-[10px] max-[411px]:flex-col'>
@@ -63,6 +73,9 @@ export default function BillingForms({ checkValue , checkFunc , tokenSTyleFunc }
                                 <div className=' flex justify-center mt-[20px]'>
                                     <button type="submit" disabled={isSubmitting} className=' bg-red-600 pt-[10px] pb-[10px] pl-[20px] pr-[20px] text-white font-extrabold rounded-3xl hover:bg-red-500'>Continue Booking</button>
                                 </div>
+                                <p className=' text-center text-red-600 font-extrabold ml-[20px] mr-[20px] mt-[10px]'>
+                                    {submitErr}
+                                </p>
                             </form>
                         )
                     }
