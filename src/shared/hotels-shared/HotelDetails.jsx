@@ -15,7 +15,7 @@ console.log(imgUrl);
 
     <section>
         <Container>
-            <Row>
+            <Row className='mt-4 mb-3'>
                 <Col lg="8">
                     <div className='tourContent'>
                         <img src={imgUrl} height={380} width={800} alt='' />

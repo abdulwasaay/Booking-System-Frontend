@@ -1,50 +1,104 @@
-import { useRef } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import "../../styles/hotels-styles/header.css";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import "../../styles/hotels-styles/header.css"
+import {  HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 
 function Header() {
-	const navRef = useRef();
+  const [click, setClick] = useState(false);
 
-	const showNavbar = () => {
-		navRef.current.classList.toggle(
-			"responsive_nav"
-		);
-	};
+  const handleClick = () => setClick(!click);
+  return (
+    <>
+      <nav className="navbar">
+        <div className="nav-container">
+          <NavLink exact to="/" className="nav-logo">
+            <span style={{fontWeight: "700"}}>RAW <span style={{color:"white"}}>-TheExplorers</span></span>
+          </NavLink>
 
-	return (
-		<header style={{background:"black"}}>
-			<h3 className="logo">
-                <span className='raw'>RAW</span>
-                <span className='explorer' style={{color:"white"}}>-TheExplorers</span>
-            </h3>
+          <ul className={click ? "nav-menu active" : "nav-menu"}>
+            <li className="nav-item marg">
+              <NavLink
+                exact
+                to="/home"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Home
+              </NavLink>
+            </li>
+            <li className="nav-item  marg">
+              <NavLink
+                exact
+                to="/about"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                About
+              </NavLink>
+            </li>
+            <li className="nav-item  marg">
+              <NavLink
+                exact
+                to="/hotels"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Hotels
+              </NavLink>
+            </li>
+            <li className="nav-item marg">
+              <NavLink
+                exact
+                to="/flights"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Flights
+              </NavLink>
+            </li>
+            <li className="nav-item marg">
+              <NavLink
+                exact
+                to="/buses"
+                activeClassName="active"
+                className="nav-links"
+                onClick={handleClick}
+              >
+                Buses
+              </NavLink>
+            </li>
+            <li className="nav-item">
+            <button className="btg">
+            <a href="/"> Log In</a>
+            </button>
+            </li>
+            <li className="nav-item">
+            <button className="btr">
+               <a href="/"> Register </a>
+            </button>
+            </li>
+          </ul>
+          <div className="nav-icon" onClick={handleClick}>
 
-			<nav ref={navRef}>
-				<a href="/home">Home</a>
-				<a href="/about">About</a>
-				<a href="/hotels">Hotels</a>
-				<a href="/flights">Flights</a>
-                <a href="/buses">Buses</a>
-                <button className="btg">
-                    Login
-                </button>
-                <button className="btr" >
-                    Register
-                </button>
-				<button
-					className="nav-btn nav-close-btn"
-					onClick={showNavbar}>
-					<FaTimes style={{ marginTop: "30", color:"#ffa500"}} />
-				</button>
-			</nav>
-			<button
-				className="nav-btn"
-				onClick={showNavbar}>
-				<FaBars style={{color:"#ffa500"}} />
-			</button>
-		</header>
-	);
+            {click ? (
+              <span className="icon">
+                <HamburgetMenuOpen />{" "}
+              </span>
+            ) : (
+              <span className="icon">
+                <HamburgetMenuClose />
+              </span>
+            )}
+          </div>
+        </div>
+      </nav>
+    </>
+  );
 }
 
 export default Header;
-
  

@@ -26,7 +26,15 @@ const Hotels = () => {
   
   return (
     <>
-    <section>
+    <section className="hotels">
+      <Container>
+        <div className="content">
+            <h5>Get to Know About <span style={{color:'#ffa500'}}>Our Hotels!</span></h5>
+            <h1>Visit <span className="changecontent"></span></h1>
+        </div>
+        </Container>
+    </section>
+    <section class='banner'>
       <Container>
         <Row>
           <Col lg='6'>
@@ -70,65 +78,7 @@ const Hotels = () => {
       <br />
       <br />
       <br />
-     
-      <section className="w-100 about-bg py-5">
-        <div className="about__content text-center">
-          <p className="title section__subheader">ABOUT US</p>
-          <h2 className=" subtitle section__header">Discover Our Underground</h2>
-          <p className=" px-5 mx-auto desc section__description">
-            Welcome to a hidden realm of extraordinary accommodations where
-            luxury, comfort, and adventure converge. Our underground hotels
-            offer an unparalleled escape from the ordinary, inviting you to
-            explore a subterranean world of wonders.
-          </p>
-          <button className="bt">Book Now</button>
-        </div>
-      </section> 
-
-      <section className="room__container me-5 pe-5 " id="room">
-        <Row className='space d-flex align-items-center'>
-          <Col lg='3'>
-          <div className="room__card">
-            <img src={room1} alt="room" />
-            <div className="room__card__details">
-              <div>
-                <h4>Deluxe Suite</h4>
-                <p>Well-appointed rooms designed for guests who desire a more.</p>
-                <h3>399/-<span>/night</span></h3>
-              </div>
-            </div>
-          </div>
-          </Col>
-          <Col lg='3'>
-          <div className="room__card">
-            <img src={room2} alt="room" />
-            <div className="room__card__details">
-              <div>
-                <h4>Family Suite</h4>
-                <p>Consist of multiple rooms and a common living area.</p>
-                <h3>599/-<span>/night</span></h3>
-              </div>
-            </div>
-          </div>
-          </Col>
-          <Col lg='3'>
-            <div className="room__card">
-            <img src={room3} alt="room" />
-            <div className="room__card__details">
-              <div>
-                <h4>Luxury Penthouse</h4>
-                <p>
-                  Top-tier accommodations usually on the highest floors of a
-                  hotel.
-                </p>
-                <h3>799/-<span>/night</span></h3>
-              </div>
-            </div>
-            </div>
-          </Col>
-        </Row>
-      </section>
-
+    
       <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">FACILITIES</p>

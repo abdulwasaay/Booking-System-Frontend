@@ -136,7 +136,6 @@
   
   .room__card img {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
-    width: 130%;
     height: 350px;
     border-radius: 5px;
     border: 1px solid var(--secondary-color);
@@ -549,4 +548,54 @@ background-color: rgb(34, 36, 36);
     -webkit-line-clamp: 3;
     overflow: hidden;
   }    
+  .hotels{
+    width: 100%;
+    height: 90vh;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.2)), url(../../../public/images/ramadaisl.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hotels .content{
+    text-align: center;
+    padding-top: 200px;
+}
+@media only screen and (max-width: 1200px) {
+    .hotels .content{
+        text-align: center;
+        padding-top: 370px;
+    }
+}
+.hotels .content h5{
+    color: white;
+    font-size: 38px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+}
+.hotels .content h1{
+    color: white;
+    font-size: 70px;
+    font-weight: 550;
+    text-shadow: 0px 1px 1px black;
+    margin-top: 5px;
+}
+.changecontent::after{
+    content: ' ';
+    color: #ffa500;
+    text-shadow: 0px 1px 1px black;
+    animation: change 10s infinite linear;
+}
+@keyframes change{
+    0%{content: "Ramada";}
+    10%{content: "PC";}
+    20%{content: "Moven'Pick";}
+    30%{content: "Hotel One";}
+    40%{content: "Hayatt";}
+    50%{content: "Sheraton";}
+    60%{content: "Mariott";}
+    70%{content: "Taj Krishna";}
+    80%{content: "Trident";}
+    90%{content: "Nishat";}
+    100%{content: "Avari";}
+} 
+
   

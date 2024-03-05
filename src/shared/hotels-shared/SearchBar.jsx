@@ -105,7 +105,7 @@ import data from '../../data/hotels-data/hotels.json';
                     <img className='card-img-top' src={val.image} height={300} width={300} alt="" />
                     <div className='card-body'>
                       <h3 className='hotel'>{val.hotel}<span className='city'> ({val.city})</span></h3>
-                      <Link to={`/hotels/${val.id}`} className='buton' sty>
+                      <Link to={`/hotels/${val.id}`} className='bt' sty>
                          View Details
                       </Link>
                     </div>
