@@ -14,9 +14,8 @@ import data from '../../data/hotels-data/hotels.json';
                   
   return (
    <div>
-    <Col lg='12'>
         <div className="searchBar">
-            <Form className='d-flex align-items-center gap-5'>
+            <Form className='search align-items-center gap-5'>
                 <FormGroup className="d-flex gap-3 formGroup formGroupFast">
                     <span>
                         <i class="ri-map-pin-line"></i>
@@ -59,7 +58,7 @@ import data from '../../data/hotels-data/hotels.json';
                 </span>
             </Form>
         </div>
-    </Col>
+   
     <br />
     <br />
     <div className="row template_Container d-flex justify-content-center">

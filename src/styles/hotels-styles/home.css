@@ -7,7 +7,13 @@
 }
 .home .content{
     text-align: center;
-    padding-top: 200px;
+    padding-top: 300px;
+}
+@media only screen and (max-width: 1200px) {
+    .home .content{
+        text-align: center;
+        padding-top: 370px;
+    }
 }
 .home .content h5{
     color: white;
@@ -301,4 +307,16 @@
     padding-inline: 25px;
     padding-block-end: 20px;
 }
-
+.bt{
+    padding-inline: 30px;
+    padding-block: 10px;
+    background-color: #ffa500;
+    border: 2px dashed white;
+    border-radius: 5px;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
+}
+.bt:hover{
+    box-shadow: white 0px 4px 12px;
+}

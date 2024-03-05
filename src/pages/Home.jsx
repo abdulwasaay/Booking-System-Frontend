@@ -28,7 +28,7 @@ const Home = () => {
             <h5>RAW - <span style={{color:'#ffa500'}}>The Explorers</span></h5>
             <h1>Visit <span className="changecontent"></span></h1>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, nisi.</p>
-            <button className='buton'>Book Place</button>
+            <button className='bt'>Book Place</button>
         </div>
     </div>
     <section className="about" id="about">
@@ -54,7 +54,7 @@ const Home = () => {
       </div>
     </section> 
 
-    <section className="about-bg">
+    <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">PACKAGES</p>
           <h2 className=" subtitle section__header">Seamless Exploration</h2>
@@ -64,7 +64,7 @@ const Home = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
       
@@ -195,7 +195,7 @@ const Home = () => {
 
     </section>
 
-    <section className="about-bg">
+    <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">SERVICES</p>
           <h2 className=" subtitle section__header">Tailored Adventures</h2>
@@ -205,10 +205,10 @@ const Home = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
-    <section className="services" id="services">
+    <section className="services py-5" id="services">
       <div className="container">
 
 
@@ -247,12 +247,7 @@ const Home = () => {
             </div>
 
           </div>
-
-
-
         </div>
-
-
         <div className="row" >
 
           <div className="col-md-4 py-3 py-md-0">
@@ -286,17 +281,12 @@ const Home = () => {
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eaque.</p>
               </div>
             </div>
-
           </div>
-
-
-
         </div>
-
       </div>
     </section>
     
-    <section className="about-bg">
+    <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">GALLERY</p>
           <h2 className=" subtitle section__header">Captivating Journeys</h2>
@@ -306,15 +296,12 @@ const Home = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
 
-    <section className="gallary" id="gallary">
+    <section className="gallary py-5" id="gallary">
       <div className="container">
-
-        
-
         <div className="row">
           <div className="col-md-4 py-3 py-md-0">
             <div className="card">

@@ -61,17 +61,17 @@ const Hotels = () => {
       </Container>
     </section>
 
-      <Container>
+      <section>
         <Row>
           <SearchBar />
         </Row>
-      </Container>
+      </section>
 
       <br />
       <br />
       <br />
      
-      <section className="about-bg">
+      <section className="w-100 about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">ABOUT US</p>
           <h2 className=" subtitle section__header">Discover Our Underground</h2>
@@ -81,7 +81,7 @@ const Hotels = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
 
@@ -94,7 +94,7 @@ const Hotels = () => {
               <div>
                 <h4>Deluxe Suite</h4>
                 <p>Well-appointed rooms designed for guests who desire a more.</p>
-                <h3>$399<span>/night</span></h3>
+                <h3>399/-<span>/night</span></h3>
               </div>
             </div>
           </div>
@@ -106,7 +106,7 @@ const Hotels = () => {
               <div>
                 <h4>Family Suite</h4>
                 <p>Consist of multiple rooms and a common living area.</p>
-                <h3>$599<span>/night</span></h3>
+                <h3>599/-<span>/night</span></h3>
               </div>
             </div>
           </div>
@@ -121,7 +121,7 @@ const Hotels = () => {
                   Top-tier accommodations usually on the highest floors of a
                   hotel.
                 </p>
-                <h3>$799<span>/night</span></h3>
+                <h3>799/-<span>/night</span></h3>
               </div>
             </div>
             </div>
@@ -129,7 +129,7 @@ const Hotels = () => {
         </Row>
       </section>
 
-      <section className="about-bg">
+      <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">FACILITIES</p>
           <h2 className=" subtitle section__header">Core Features</h2>
@@ -139,11 +139,11 @@ const Hotels = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
 
-      <section className="section__container feature__container" id="feature">
+      <section className="section__container feature__container py-5" id="feature">
      <Container>
       <Row>
       <Col lg="3">
@@ -234,7 +234,7 @@ const Hotels = () => {
       </Container>
       </section>
 
-      <section className="about-bg">
+      <section className="about-bg py-5">
         <div className="about__content text-center">
           <p className="title section__subheader">MENU</p>
           <h2 className=" subtitle section__header">Our Food Menu</h2>
@@ -244,7 +244,7 @@ const Hotels = () => {
             offer an unparalleled escape from the ordinary, inviting you to
             explore a subterranean world of wonders.
           </p>
-          <button className="buton">Book Now</button>
+          <button className="bt">Book Now</button>
         </div>
       </section> 
       <Container>

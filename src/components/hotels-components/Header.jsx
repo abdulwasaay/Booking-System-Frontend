@@ -1,76 +1,50 @@
-import React from 'react'
-import { Container, Row, Button } from 'reactstrap';
-import {NavLink, Link} from 'react-router-dom';
-import '../../styles/hotels-styles/header.css';
-const navLinks = [
-    {
-        path:'/home',
-        display:'Home'
-    },
-    {
-        path:'/about',
-        display:'About'
-    },
-    {
-        path:'/hotels',
-        display:'Hotels'
-    },
-    {
-        path:'/flights',
-        display:'Flights'
-    },
-    {
-        path:'/buses',
-        display:'Buses'
-    }
-]
+import { useRef } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "../../styles/hotels-styles/header.css";
 
+function Header() {
+	const navRef = useRef();
 
-const Header = () => {
-  return (
-    <header className="header">
-        <Container>
-            <Row>
-                <div className="navWrapper d-flex align-items-center justify-content-between">
-                    
-                        <div className="logo">
-                            <span className='raw'>RAW</span>
-                            <span className='explorer'>-TheExplorers</span>
-                        </div>
-                    
-                    
-                        <div className="navigation">
-                           <ul className="menu d-flex align-items-center gap-5">
-                                {
-                                    navLinks.map((item, index)=>(
-                                        <li className="navItem" key={index}>
-                                            <NavLink to={item.path} className={navClass => navClass.isActive ? 'activeLink' : ''}>{item.display}</NavLink>
-                                        </li>
-                                    ))
-                                }
-                                
-                            </ul> 
-                        </div>
+	const showNavbar = () => {
+		navRef.current.classList.toggle(
+			"responsive_nav"
+		);
+	};
 
-                        <div className='navRight d-flex align-items-center gap-4'>
-                          <div className="navBtns d-flex align-items-center gap-4">
-                                <Button className='btn primaryBtn'>
-                                    <Link to="/register">Register</Link>
-                                </Button>
-                                <Button className='btn secondaryBtn'>
-                                    <Link to="/login">Log In</Link>
-                                </Button>
-                            </div> 
-                            <span className="mobileMenu">
-                                <i class="ri-menu-line"></i>
-                            </span> 
-                        </div>
-                    
-                </div>
-            </Row>
-        </Container>
-    </header>
-  )
+	return (
+		<header style={{background:"black"}}>
+			<h3 className="logo">
+                <span className='raw'>RAW</span>
+                <span className='explorer' style={{color:"white"}}>-TheExplorers</span>
+            </h3>
+
+			<nav ref={navRef}>
+				<a href="/home">Home</a>
+				<a href="/about">About</a>
+				<a href="/hotels">Hotels</a>
+				<a href="/flights">Flights</a>
+                <a href="/buses">Buses</a>
+                <button className="btg">
+                    Login
+                </button>
+                <button className="btr" >
+                    Register
+                </button>
+				<button
+					className="nav-btn nav-close-btn"
+					onClick={showNavbar}>
+					<FaTimes style={{ marginTop: "30", color:"#ffa500"}} />
+				</button>
+			</nav>
+			<button
+				className="nav-btn"
+				onClick={showNavbar}>
+				<FaBars style={{color:"#ffa500"}} />
+			</button>
+		</header>
+	);
 }
 
-export default Header
+export default Header;
+
+ 
