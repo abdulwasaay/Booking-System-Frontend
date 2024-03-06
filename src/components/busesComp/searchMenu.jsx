@@ -19,19 +19,6 @@ export default function DropDown({ opens, ids, val , setOps }) {
             setArr([])
         }
 
-        // let slide = document.getElementById(ids);
-        // if (opens) {
-        //     document.addEventListener('keydown', (eve) => {
-        //         switch (eve.key) {
-        //             case "ArrowDown":
-        //                 slide.scrollTop = slide.scrollTop + 10
-        //                 break;
-        //             case "ArrowUp":
-        //                 slide.scrollTop = slide.scrollTop - 10
-        //                 break;
-        //         }
-        //     })
-        // }
     }, [opens, ids, val])
 
     return (
