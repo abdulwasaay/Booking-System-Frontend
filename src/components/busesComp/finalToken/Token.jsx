@@ -9,13 +9,12 @@ export default function BillToken({toknstyle}) {
     const navigate = useNavigate();
     const { toPDF, targetRef } = usePDF({filename: 'token.pdf'});
     const {paymentData} = useContext(paymentContext);
-    console.log(paymentData);
 
     const downloadPdf = ()=>{
         toPDF()
         setTimeout(()=>{
             localStorage.removeItem("BookingCart");
-            navigate("/");
+            navigate("/home");
         },3000)
     }
 

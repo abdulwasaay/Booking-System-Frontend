@@ -1,9 +1,17 @@
 import { Formik } from "formik";
-import { Link, json } from "react-router-dom";
+import { useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function SignupComp() {
+  const navigate = useNavigate();
+  useEffect(()=>{
+    const tokenData = localStorage.getItem("token");
+    if (tokenData){
+      navigate("/home");
+    }
+  },[])
     return(
-        <div className=" w-[600px] pt-[20px] pb-[20px] rounded-2xl shadow-lg absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] max-[659px]:w-[90%]">
+        <div className=" w-[600px] pt-[20px] pb-[20px] rounded-2xl shadow-lg mx-auto my-5 max-[659px]:w-[90%]">
         <div className=" flex justify-center">
             <h1 className="text-[#f5b342] font-bold">B</h1>
             <h1 className="text-[#2e2d2b] font-bold">ook</h1>

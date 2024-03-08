@@ -4,7 +4,7 @@ import { Container, Row, Col } from 'reactstrap';
 
 const Footer = () => {
   return (
-    <section className='bg'>
+    <section id='footer' className='bg' >
         <Container className='py-5'>
       <Row class="section__container footer__container d-flex align-items-center ">
         <Col lg="5" class="footer__col">

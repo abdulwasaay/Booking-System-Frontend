@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "../../styles/hotels-styles/header.css"
 import {  HamburgetMenuClose, HamburgetMenuOpen } from "./Icons";
 
@@ -9,7 +9,7 @@ function Header() {
   const handleClick = () => setClick(!click);
   return (
     <>
-      <nav className="navbar">
+      <nav id="nav-bar" className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
             <span style={{fontWeight: "700"}}>RAW <span style={{color:"white"}}>-TheExplorers</span></span>
@@ -73,12 +73,12 @@ function Header() {
             </li>
             <li className="nav-item">
             <button className="btg">
-            <a href="/"> Log In</a>
+            <Link to="/login"> Log In</Link>
             </button>
             </li>
             <li className="nav-item">
             <button className="btr">
-               <a href="/"> Register </a>
+               <Link to="/signup"> Register </Link>
             </button>
             </li>
           </ul>
