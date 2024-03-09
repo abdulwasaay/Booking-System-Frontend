@@ -186,6 +186,10 @@
     text-decoration: none;
     color: white;
 }
+.btr a:hover{
+    text-decoration: none;
+    color: white;
+}
 .btg a{
     text-decoration: none;
     color: white;
