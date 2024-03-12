@@ -12,16 +12,16 @@ function Header() {
       <nav id="nav-bar" className="navbar">
         <div className="nav-container">
           <NavLink exact to="/" className="nav-logo">
-            <span style={{fontWeight: "700"}}>RAW <span style={{color:"white"}}>-TheExplorers</span></span>
+            <span style={{fontWeight: "700",color:"#ffa500"}}>RAW <span style={{color:"white"}}>-TheExplorers</span></span>
           </NavLink>
 
-          <ul className={click ? "nav-menu active" : "nav-menu"}>
+          <ul className={click ? "nav-menu active" : "nav-menu"} >
             <li className="nav-item marg">
               <NavLink
                 exact
                 to="/home"
                 activeClassName="active"
-                className="nav-links"
+                className="nav-links" style={{color:"white",textDecoration:"none"}}
                 onClick={handleClick}
               >
                 Home
@@ -32,7 +32,7 @@ function Header() {
                 exact
                 to="/about"
                 activeClassName="active"
-                className="nav-links"
+                className="nav-links" style={{color:"white",textDecoration:"none"}}
                 onClick={handleClick}
               >
                 About
@@ -43,7 +43,7 @@ function Header() {
                 exact
                 to="/hotels"
                 activeClassName="active"
-                className="nav-links"
+                className="nav-links" style={{color:"white",textDecoration:"none"}}
                 onClick={handleClick}
               >
                 Hotels
@@ -54,7 +54,7 @@ function Header() {
                 exact
                 to="/flights"
                 activeClassName="active"
-                className="nav-links"
+                className="nav-links" style={{color:"white",textDecoration:"none"}}
                 onClick={handleClick}
               >
                 Flights
@@ -65,7 +65,7 @@ function Header() {
                 exact
                 to="/buses"
                 activeClassName="active"
-                className="nav-links"
+                className="nav-links" style={{color:"white",textDecoration:"none"}}
                 onClick={handleClick}
               >
                 Buses
@@ -73,12 +73,12 @@ function Header() {
             </li>
             <li className="nav-item">
             <button className="btg">
-            <Link to="/login"> Log In</Link>
+            <Link to="/login" style={{color:"white",textDecoration:"none"}}> Log In</Link>
             </button>
             </li>
             <li className="nav-item">
             <button className="btr">
-               <Link to="/signup"> Register </Link>
+               <Link to="/signup" style={{color:"white",textDecoration:"none"}}> Register </Link>
             </button>
             </li>
           </ul>
@@ -86,11 +86,11 @@ function Header() {
 
             {click ? (
               <span className="icon">
-                <HamburgetMenuOpen />{" "}
+                <HamburgetMenuClose />{" "}
               </span>
             ) : (
               <span className="icon">
-                <HamburgetMenuClose />
+                <HamburgetMenuOpen />
               </span>
             )}
           </div>
