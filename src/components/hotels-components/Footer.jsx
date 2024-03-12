@@ -8,7 +8,7 @@ const Footer = () => {
         <Container className='py-5'>
       <Row class="section__container footer__container d-flex align-items-center ">
         <Col lg="5" class="footer__col">
-        <div className="logo">
+        <div className="logo" style={{fontSize: "30px", margin: "20px"}}>
             <span className='explorer' style={{color: "#ffa500"}}>RAW</span>
             <span className='raw raw2' >-TheExplorers</span>
         </div>
@@ -33,7 +33,7 @@ const Footer = () => {
           </ul>
         </Col>
         <Col lg="3" class="footer__col">
-          <h4 className='description2' style={{color: "#ffa500"}}>Services</h4>
+          <h4 className='description2' style={{color: "#ffa500" , fontSize: "30px", margin: "20px"}}>Services</h4>
           <div class="footer__links">
             <li className='description'><a href="#">Online Booking</a></li>
             <li className='description'><a href="#">Room Customization</a></li>
@@ -44,7 +44,7 @@ const Footer = () => {
           </div>
         </Col>
         <Col lg="3" class="footer__col">
-          <h4 className='description2' style={{color: "#ffa500"}}>Contact Us</h4>
+          <h4 className='description2' style={{color: "#ffa500", fontSize: "30px", margin: "20px"}}>Contact Us</h4>
           <div class="footer__links">
             <li>
               <span><i class="ri-phone-fill" style={{color: "#ffa500"}}></i></span>

@@ -102,10 +102,10 @@ import data from '../../data/hotels-data/hotels.json';
               .map((val) => {
                 return(
                   <div className="card col-3 my-2   template" key={val.id} style={{width: 300, marginInline: 5, paddingBlock:10}}>
-                    <img className='card-img-top' src={val.image} height={300} width={300} alt="" />
+                    <img className='card-img-top' src={val.image} style={{height: "300px"}} width={300} alt="" />
                     <div className='card-body'>
-                      <h3 className='hotel'>{val.hotel}<span className='city'> ({val.city})</span></h3>
-                      <Link to={`/hotels/${val.id}`} className='bt' sty>
+                      <h3 className='hotel' style={{color:"black"}}>{val.hotel}<span className='city' style={{color:"black"}}> ({val.city})</span></h3>
+                      <Link to={`/hotels/${val.id}`} className='bt' >
                          View Details
                       </Link>
                     </div>

@@ -27,13 +27,13 @@ const HotelDetails = () => {
                             <img src={imgUrl} height={380} width={800} alt='' />
 
                             <div className='tourInfo'>
-                                <h2>{hotel} ({city})</h2>
+                                <h2 style={{fontSize: "25px",fontWeight: "1000"}}> {hotel} ({city})</h2>
                                 <div className='tourDescription'>
                                     {description}
                                 </div>
                                 <div className='tourDates'>
-                                    <h6>Available Arrival Dates: <span>{arrival}</span></h6>
-                                    <h6>Available Departure Dates: <span>{departure}</span></h6>
+                                    <h6 style={{fontSize: "18px",fontWeight: "700"}}>Available Arrival Dates: <span>{arrival}</span></h6>
+                                    <h6 style={{fontSize: "18px",fontWeight: "700"}}>Available Departure Dates: <span>{departure}</span></h6>
                                 </div>
                                 <div className='tourPrice'>
                                     <i class="ri-hand-coin-line"></i><span>  Price: {price}</span>
@@ -151,7 +151,7 @@ const HotelDetails = () => {
                                                     </p>
                                                 </div>
                                             </FormGroup>
-                                            <button type="submit" disabled={isSubmitting} className="pay text-center" >
+                                            <button type="submit" disabled={isSubmitting} className="pay text-center" style={{color:"black"}} >
                                                 Pay Now
                                             </button>
                                             <p className=' text-center text-red-600 font-extrabold ml-[20px] mr-[20px] mt-[10px]'>

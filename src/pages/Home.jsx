@@ -304,18 +304,18 @@ const Home = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-4 py-3 py-md-0">
-            <div className="card">
-              <img src={khi2} alt="" height="230px" />
+            <div className="card" style={{height: "300px"}}>
+              <img src={khi2} alt="" style={{height: "300px"}} />
             </div>
           </div>
           <div className="col-md-4 py-3 py-md-0">
-            <div className="card">
-              <img src={lhr2} alt="" height="230px" />
+            <div className="card" style={{height: "300px"}}>
+              <img src={lhr2} alt="" style={{height: "300px"}} />
             </div>
           </div>
           <div className="col-md-4 py-3 py-md-0">
-            <div className="card">
-              <img src={isl2} alt="" height="230px" />
+            <div className="card" style={{height: "300px"}}>
+              <img src={isl2} alt="" style={{height: "300px"}} />
             </div>
           </div>
         </div>
@@ -323,18 +323,18 @@ const Home = () => {
 
         <div className="row">
           <div className="col-md-4 py-3 py-md-0">
-            <div className="card">
-              <img src={qt2} alt="" height="230px" />
+            <div className="card"  style={{height: "300px"}}>
+              <img src={qt2} alt="" style={{height: "300px"}} />
             </div>
           </div>
           <div className="col-md-4 py-3 py-md-0">
-            <div className="card">
-              <img src={skd2} alt="" height="230px" />
+            <div className="card" style={{height: "300px"}}>
+              <img src={skd2} alt="" style={{height: "300px"}} />
             </div>
           </div>
           <div class="col-md-4 py-3 py-md-0">
-            <div class="card">
-              <img src={kash2} alt="" height="230px" />
+            <div class="card" style={{height: "300px"}}>
+              <img src={kash2} alt="" style={{height: "300px"}} />
             </div>
           </div>
         </div>
