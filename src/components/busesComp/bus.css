@@ -26,6 +26,7 @@
 .cardTravel{
     flex-basis: 20.55555%;
     width: 100%;
+    overflow: visible;
 }
 
 @media (max-width:1067px) {

@@ -4,10 +4,10 @@ export default function PopDestinations() {
     return (
         <section className=' pt-[80px] ml-[20px] mr-[20px]'>
             <div className=' flex flex-col items-center text-center'>
-                <div className='ml-[20px] mr-[20px]'>
-                    <div className='flex justify-center'>
-                    <h2 className='text-[#2e2d2b] max-[388px]:text-[20px]'>Popular</h2>
-                    <h2 className='text-[#f5b342] ml-[8px] max-[388px]:text-[20px]'>Destinations</h2>
+                <div className='ml-[20px] mr-[20px] mb-[20px]'>
+                    <div className='flex justify-center mb-[20px]'>
+                    <h2 className='text-[#2e2d2b] text-[30px] max-[388px]:text-[20px]'>Popular</h2>
+                    <h2 className='text-[#f5b342] text-[30px] ml-[8px] max-[388px]:text-[20px]'>Destinations</h2>
                     </div>
                     <p className='text-[#585858] max-[388px]:text-[13px]'>From historical cities to natural specteculars, Come see the best of the world!</p>
                 </div>

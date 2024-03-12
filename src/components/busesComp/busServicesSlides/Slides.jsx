@@ -1,7 +1,7 @@
 import "./slides.css"
 export default function ServiceSlide(){
     return(
-        <div id="slides" className="  max-[656px]:w-[] main-container pt-[20px] pb-[20px] whitespace-nowrap overflow-hidden">
+        <div id="slides" className=" mt-[150px] mb-[40px] main-container pt-[20px] pb-[20px] whitespace-nowrap overflow-hidden">
             <div className=" w-[1600px] child-container inline-block">
                 <img src="/images/Bilal Travels.png" className="inline ml-[25px] mr-[25px] w-[80px] h-[80px]"/>
                 <img src="/images/Daewoo Express.png" className="inline ml-[25px] mr-[25px] w-[80px] h-[80px]"/>

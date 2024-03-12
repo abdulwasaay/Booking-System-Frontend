@@ -7,6 +7,8 @@ import Buses from '../pages/Buses/buses';
 import BusOrderPage from '../pages/Buses/BusesOrder';
 import Signup from '../pages/Signup';
 import Login from '../pages/Login';
+import Flights from '../pages/Flights/Flight';
+import FlightOrders from '../pages/Flights/FlightOrder';
 
 const Routers = () => {
   return (
@@ -17,6 +19,8 @@ const Routers = () => {
         <Route path='/hotels/:hotelId' element={<HotelDetails />} />
         <Route path='/buses' element={<Buses />} />
         <Route path='/buses/ordernow' element={<BusOrderPage />}/>
+        <Route path='/flights' element={<Flights />}/>
+        <Route path='/flights/ordernow' element={<FlightOrders />}/>
         <Route path='/signup' element={<Signup />}/>
         <Route path='/login' element={<Login />}/>
     </Routes>
