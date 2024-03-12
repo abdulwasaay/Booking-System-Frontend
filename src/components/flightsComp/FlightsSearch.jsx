@@ -43,7 +43,7 @@ export default function FlightsBookingForm() {
     }
     return (
         <section className="">
-            <div className=" absolute w-[80%] left-[10%] top-[540px]">
+            <div className=" absolute w-[80%] left-[10%] top-[630px]">
                 <div className=" flex w-[175px] pl-[35px] pt-[10px] pb-[4px] bg-[#2e2d2b]">
                     <h2 className=" font-semibold text-[15px] text-white">Flights</h2>
                     <h2 className="text-[#f5b342] font-semibold ml-1 text-[15px]">Travels</h2>
